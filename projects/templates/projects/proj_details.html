@@ -16,12 +16,5 @@
         <p>Опубликован: {{ project.date }}</p>
         <a href="{% url 'delete_proj' project.id %}" class="btn btn-warning">-Удалить</a>
         <a href="{% url 'update_proj' project.id %}" class="btn btn-danger">-Редактировать</a>               
-        <!--<div class="row">
-            {% if project.image %}
-                <div class="col-md-auto"><img src="{{ project.image.url }}" class="main-image"></div>
-            {% endif %}     
-        </div>   -->
     </div>
 {% endblock %}
-
-<!--  <a href="{% url 'test_img' project.id %}" class="btn btn-danger">-Тестирование IMG</a>  -->

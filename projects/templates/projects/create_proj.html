@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Форма добавленияпроектов{% endblock %}  
+
+{% block content %}
+    <div class="features">
+        <h1>Форма добавления/изменения проектов</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>Название: {{ form.title }}</p>
+            <p>Автор: {{ form.autor }}</p>
+            <p>Полный текст: {{ form.full_text }}</p>
+            <p>Фотографии: </p>
+            <button type="submit">Загрузить</button>                 
+            <p><img src="{{ photos.image.url }}" width=550px heigth=550></p>            
+            <p>Опубликован: {{ form.date }}</p>
+            <span>{{ error }}</span>
+            <button class="btn btn-warning" type="submit">Добавить/Сохранить проект</button>
+        </form>            
+    </div>
+{% endblock %}

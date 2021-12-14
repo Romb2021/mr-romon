@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Проекты{% endblock %}  
+
+{% block content %}
+    <div class="features">
+        <h1 class="logo_color">Проекты</h1>        
+        {% if proj %}
+            {% for el in proj %}
+                <div class="alert alert-warning">
+                    <h3>Название: {{ el.title }}</h3>
+                    <p>Автор: {{ el.autor }}</p>
+                    <p>Добавлен: {{ el.date }}</p>
+                    <a href="{% url 'detail_proj' el.id %}" class="btn btn-warning">-Читать детальнее</a>
+                </div>
+            {% endfor %}
+        {% else %}   
+                <p>У вас нет проектов</p>
+        {% endif %}      
+        <a href="{% url 'create_proj' %}" class="others">Добавить проект</a>
+    </div>    
+{% endblock %}

@@ -8,7 +8,7 @@
         {% if news %}
             {% for el in news %}
                 <div class="alert alert-warning">
-                    <h3>Нзавание: {{ el.title }}</h3>
+                    <h3>Название: {{ el.title }}</h3>
                     <p>Проект: {{ el.project }}</p>
                     <p>Опубликована: {{ el.date }}</p>
                     <a href="{% url 'news_detail' el.id %}" class="btn btn-warning">-Читать детальнее</a>

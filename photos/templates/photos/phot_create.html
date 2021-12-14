@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Форма добавления фото{% endblock %}  
+
+{% block content %}
+<div class="features">
+    <h1>Добавление/изменение фото</h1>
+    <div>Фото: <img src="{{ form.image.url }}" width=250px heigth=250px></div>
+    <form method="post">
+        {% csrf_token %}
+        <p>Название:{{ form.title }}</p>
+        <p>Автор: {{ form.autor }}<p>
+        <p>Проект: {{ form.project }}</p>                                              
+        <p>Опубликован: {{ form.date }}</p>
+        <span>{{ error }}</span>
+        <button class="btn btn-warning" type="submit">Сохранить</button>
+    </form>            
+</div>
+{% endblock %}
+

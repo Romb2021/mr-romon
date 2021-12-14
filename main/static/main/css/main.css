@@ -1,0 +1,133 @@
+body {
+    background: #181818;
+    /*background-image: url("background_1.jpg"); */
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 18%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo {
+    color: rgb(192, 211, 219);
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;    
+    width: 75%;
+}
+
+main .features h1 {font-size: 50px;}  
+main .features p {max-width: 400px; margin: 25px auto}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 600 px;
+    margin: 20px 30%;
+    text-align: left;
+    color: rgb(196, 182, 182);
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+a {
+    color: rgb(219, 240, 206);
+    font-family: helvetica;    
+    text-decoration: none;    
+  }
+
+.others {
+    color: rgb(133, 181, 212);
+    position: left;    
+    font-size: 20px;    
+    width: 200 px;
+    margin: 20px 34%;
+  }
+
+  .my_button_1{
+    color: rgb(125, 189, 104);  
+    font-size: 18px;    
+  }
+
+  .my_button_2{
+    color: rgb(126, 179, 223);  
+    font-size: 18px;    
+  }
+
+  .top_image, .descript {
+    color: rgb(109, 158, 93);
+  }
+
+  .top_image {
+      border-style: solid;
+      border-width: 1px;
+      margin: 10px 10px 10px 10px;
+  }
+
+  .hr_class {
+      color: rgb(109, 158, 93);
+      border-width: 1px;
+  }
+
+  .descript {
+    font-size: 20px;
+    display: inline;
+ }
+
+ .logo_color {
+    color:rgb(192, 211, 219);
+ }
+    
+.top {
+    color: rgb(126, 179, 223);  
+} 
+
+img.main-image {
+    width: 300px;
+}
+
+.features .list_as {
+    display: inline;
+}

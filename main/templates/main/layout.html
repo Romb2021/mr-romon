@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title> {% block title %}{% endblock %}</title>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/logo_simpl.png' %}" alt="Лого">
+        <span class="logo">САМОДЕЛ</span>       
+        <h3 class="logo_color">Навигация</h3> 
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fa fa-home" aria-hidden="true"></i>  - Главная</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fa fa-database" aria-hidden="true"></i>  - Новости</li></a>
+            <a href="{% url 'proj_home' %}"><li><i class="fa fa-rocket" aria-hidden="true"></i>  - Проекты</li></a>
+            <a href="{% url 'phot_home' %}"><li><i class="fa fa-camera" aria-hidden="true"></i>  - Фото </li></a>
+            <a href="{% url 'files' %}"><li><i class="fa fa-address-book-o" aria-hidden="true"></i>  - Файлы</li></a>
+            <a href="{% url 'contact' %}"><li><i class="fa fa-address-book-o" aria-hidden="true"></i>  - Контакты</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

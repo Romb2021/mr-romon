@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock %}  
+
+{% block content %}
+    <div class="features">
+        <h1 class="logo_color">{{ title }}</h1>        
+        <p class="descript">Сайт посвящен самодельным конструкциям, прежде всего радиолюбительским, электрическим, электромехническим и прочим.</p>
+        <hr class="hr_class">
+        <h2 class="top">ТОП 10-ти Проектов</h2>        
+            <tr>
+                <td>
+                    <a class="top_image" href="http://127.0.0.1:8000/projects/1"><img src="{% static 'main/img/kvadro.jpg' %}" alt="Первый проект"></a>
+                </td>                       
+                <td>
+                    <a class="top_image" href="http://127.0.0.1:8000/projects/2"><img src="{% static 'main/img/manage_cell.jpg' %}" alt="Второй проект"></a>
+                </td>                       
+                <td>
+                    <a class="top_image" href="http://127.0.0.1:8000/projects/3"><img src="{% static 'main/img/Raspberry_3.jpg' %}" alt="Третий проект"></a>
+                </td>                                                       
+            </tr>
+            <br><br>
+        <a href="{% url 'news_home' %}" class="my_button_1"> # новости # </a><br>
+        <a href="{% url 'proj_home' %}" class="my_button_2"> ~ проекты ~ </a>
+    </div>
+{% endblock %}    

@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Project
-from photos.models import Photos
 from .forms import ProjectForm
-# from .forms import ImgForm
 from django.views.generic import DetailView, UpdateView, DeleteView
+from django.core.files.storage import FileSystemStorage
 
 
 def project_home(request):
@@ -18,9 +17,8 @@ class ProjDetailView(DetailView):
 
 
 class ProjUpdateView(UpdateView):
-    model = Project 
-    success_url = '/projects/'    
-    template_name = 'projects/create_proj.html'     
+    model = Project  
+    template_name = 'projects/create_proj.html'
     form_class = ProjectForm
 
 
@@ -31,19 +29,19 @@ class ProjDeleteView(DeleteView):
 
 
 def create_proj(request):
-    error = ''    
-    if request.method=='POST':        
-        form = ProjectForm(request.POST)
+    error = ''
+    if request.method == 'POST':     
+        form = ProjectForm(request.POST, request.FILES) 
+        print("title = ",form)
         if form.is_valid():
             form.save()
             return redirect('proj_home')
         else:
-            error = 'Форма была неверной'
-
-    form = ProjectForm()
-    data = {
-        'form': form,
-        'error': error
-    }
+            error = 'Некорректная форма.'    
+    else:
+        form = ProjectForm()
+        
+    data = { 'form': form,
+        'error': error }
 
     return render(request,'projects/create_proj.html', data)

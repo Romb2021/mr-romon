@@ -1,9 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Photos, Project
+from .models import Photos
 from .forms import PhotoForm
-from projects.forms import ProjectForm
-from django.views.generic import DetailView, UpdateView, DeleteView, CreateView
-from django.core.files.storage import FileSystemStorage
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def phot_home(request):

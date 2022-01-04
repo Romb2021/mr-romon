@@ -32,7 +32,6 @@ def create_proj(request):
     error = ''
     if request.method == 'POST':     
         form = ProjectForm(request.POST, request.FILES) 
-        print("title = ",form)
         if form.is_valid():
             form.save()
             return redirect('proj_home')

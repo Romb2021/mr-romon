@@ -10,10 +10,9 @@
             <p>Название: {{ form.title }}</p>
             <p>Автор: {{ form.autor }}</p>
             <p>Полный текст: {{ form.full_text }}</p>  
+            <p>Фото: {{ form.image }}</p>
             {% if project.image %}                    
                 <p>Фото: <img src="{{ project.image.url }}" width=550px heigth=550></p>                 
-            {% else %}
-                <p>Фото нет</p>
             {% endif %}                
             <p>Опубликован: {{ form.date }}</p>
             <!-- {% if error %}  {% else %}  {% endif %} -->

@@ -7,6 +7,7 @@ class Project(models.Model):
     # autor = models.ForeignKey(AdvUser, on_delete=models.CASCADE, verbose_name='Автор проекта')
     autor = models.CharField('Автор',max_length=200)
     image = models.ImageField(blank=True, upload_to=get_timestamp_path, verbose_name='Изображение')    
+    file = models.FileField(blank=True, upload_to=get_timestamp_path, verbose_name='Файл')
     full_text = models.TextField('Проект')
     date = models.DateTimeField('Дата публикации')    
 

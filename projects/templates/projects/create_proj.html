@@ -13,9 +13,9 @@
             <p>Фото: {{ form.image }}</p>
             {% if project.image %}                    
                 <p>Фото: <img src="{{ project.image.url }}" width=550px heigth=550></p>                 
-            {% endif %}                
+            {% endif %}              
+            <p>Файл: {{ form.file }}</p>               
             <p>Опубликован: {{ form.date }}</p>
-            <!-- {% if error %}  {% else %}  {% endif %} -->
             <span>{{ error }}</span>
             <button class="btn btn-warning" type="submit">Добавить проект</button>       
         </form>

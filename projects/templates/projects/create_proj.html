@@ -14,7 +14,10 @@
             {% if project.image %}                    
                 <p>Фото: <img src="{{ project.image.url }}" width=550px heigth=550></p>                 
             {% endif %}              
-            <p>Файл: {{ form.file }}</p>               
+            <p>Файл: {{ form.file }}</p>   
+            {% if project.file %}                    
+                <p>Файл: <img src="{{ project.file.url }}" width=550px heigth=550></p>                 
+            {% endif %}                          
             <p>Опубликован: {{ form.date }}</p>
             <span>{{ error }}</span>
             <button class="btn btn-warning" type="submit">Добавить проект</button>       

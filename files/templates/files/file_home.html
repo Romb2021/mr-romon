@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Файлы проектов {% endblock %}  
+
+{% block content %}
+<div class="features">
+    <h1 class="logo_color">Файлы проектов</h1>        
+    {% if file %}
+        {% for el in file %}
+            <div class="alert alert-warning">
+                <h3>Файл:</h3>
+                <p><img src="{{ el.file.url }}" width=250px heigth=250px></p>
+                <p>Описание файла: {{ el.describe }}</p>
+                <p>Проект файла: {{ el.project.title }}</p>                
+                <p>Добавлен: {{ el.date }}</p>
+                <a href="{% url 'file_detail' el.id %}" class="btn btn-warning">-Смотреть детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}   
+            <p>У вас нет файлов</p>
+    {% endif %}
+</div>    
+{% endblock %}

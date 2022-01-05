@@ -9,7 +9,7 @@ class ProjectForm(ModelForm):
     error_messages={'invalid_extension':'Этот формат файлов не поддерживается'})   
 
     file = forms.FileField(label='Файл',
-    validators=[validators.FileExtensionValidator(allowed_extensions=('docx', 'pdf', 'zip', '.jpg'))], 
+    validators=[validators.FileExtensionValidator(allowed_extensions=('docx', 'pdf', 'zip', 'jpg'))], 
     error_messages={'invalid_extension':'Этот формат файлов не поддерживается'})
 
     class Meta:

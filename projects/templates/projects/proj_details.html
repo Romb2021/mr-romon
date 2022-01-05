@@ -9,10 +9,11 @@
         <p>Автор: {{ project.autor }}</p>                               
         <p>Полный текст: {{ project.full_text }}</p> 
         {% if project.image %}
-            <p>Фото: <img src="{{ project.image.url }}" width=550px heigth=550></p>   
-        {% else %}               
-            <p> Фотографий нет </p>
+            <p>Фото: <img src="{{ project.image.url }}" width=550px heigth=550></p>
         {% endif %}
+        {% if project.file %} 
+            <p>Файл: <img src="{{ project.file.url }}" width=550px heigth=550></p>
+        {% endif %}        
         <p>Опубликован: {{ project.date }}</p>
         <a href="{% url 'delete_proj' project.id %}" class="btn btn-warning">-Удалить</a>
         <a href="{% url 'update_proj' project.id %}" class="btn btn-danger">-Редактировать</a>               

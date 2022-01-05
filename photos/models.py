@@ -16,5 +16,5 @@ class Photos(models.Model):
         return f'/photos/{self.id}'
 
     class Meta:
-        verbose_name = 'Фотогр2афия'
+        verbose_name = 'Фотография'
         verbose_name_plural = 'Фотографии'

@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ files.project.title }}{% endblock %}  
+
+{% block content %}
+    <div class="features">
+        <h3>Файл проекта:</h3>
+        <p><img src="{{ files.file.url }}" width=550px heigth=550></p>
+        <h5>Описание файла: {{ files.describe }}</h5>                
+        <p>Проект файла: <a href="{{ files.project.get_absolute_url }}">{{ files.project.title }}</a></p>
+        <p>Опубликовано: {{ photos.date }}</p>
+    </div>
+{% endblock %}

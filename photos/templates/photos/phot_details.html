@@ -6,7 +6,7 @@
     <div class="features">
         <h3>Фотография:</h3>
         <p><img src="{{ photos.image.url }}" width=550px heigth=550></p>
-        <h1>Описание фото: {{ photos.describe }}</h1>                
+        <h5>Описание фото: {{ photos.describe }}</h5>                
         <p>Проект фото: <a href="{{ photos.project.get_absolute_url }}">{{ photos.project.title }}</a></p>
         <p>Опубликовано: {{ photos.date }}</p>
     </div>

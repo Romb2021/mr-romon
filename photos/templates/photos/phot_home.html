@@ -1,6 +1,6 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Фотографии{% endblock %}  
+{% block title %}Фотографии проектов{% endblock %}  
 
 {% block content %}
 <div class="features">
@@ -8,17 +8,16 @@
     {% if phot %}
         {% for el in phot %}
             <div class="alert alert-warning">
-                <h3>Название: {{ el.title }}</h3>
-                <p>Автор: {{ el.autor }}</p>
-                <p>Проект: {{ el.project.title }}</p>
-                <img src="{{ el.image.url }}" width=250px heigth=250px>
+                <h3>Фотография:</h3>
+                <p><img src="{{ el.image.url }}" width=250px heigth=250px></p>
+                <p>Описание фото: {{ el.describe }}</p>
+                <p>Проект фото: {{ el.project.title }}</p>                
                 <p>Добавлен: {{ el.date }}</p>
                 <a href="{% url 'phot_detail' el.id %}" class="btn btn-warning">-Смотреть детальнее</a>
             </div>
         {% endfor %}
     {% else %}   
             <p>У вас нет фотографий</p>
-    {% endif %}      
-    <a href="{% url 'phot_create' %}" class="others">Добавить фотографию</a>
+    {% endif %}
 </div>    
 {% endblock %}

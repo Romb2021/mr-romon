@@ -4,13 +4,10 @@
 
 {% block content %}
     <div class="features">
-        <h1>Название: {{ photos.title }}</h1>                
-        <p>Автор: {{ photos.autor }}</p>
-        <p>Проект: <a href="{{ photos.project.get_absolute_url }}">{{ photos.project.title }}</a></p>
-        <p>Фотография:</p>
+        <h3>Фотография:</h3>
         <p><img src="{{ photos.image.url }}" width=550px heigth=550></p>
-        <p>Опубликована: {{ photos.date }}</p>
-        <a href="{% url 'phot_delete' photos.id %}" class="btn btn-warning">-Удалить</a>
-        <a href="{% url 'phot_update' photos.id %}" class="btn btn-danger">-Редактировать</a>
+        <h1>Описание фото: {{ photos.describe }}</h1>                
+        <p>Проект фото: <a href="{{ photos.project.get_absolute_url }}">{{ photos.project.title }}</a></p>
+        <p>Опубликовано: {{ photos.date }}</p>
     </div>
 {% endblock %}

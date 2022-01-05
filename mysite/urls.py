@@ -13,7 +13,7 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('projects/', include('projects.urls')),
     path('photos/', include('photos.urls')),
-    # path('files/', include('files.urls')),
+    path('files/', include('files.urls')),
     path('accounts/login/', LoginView.as_view(), name = 'login'),
 ] 
 

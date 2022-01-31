@@ -13,7 +13,7 @@
                 <p>Описание файла: {{ el.describe }}</p>
                 <p>Проект файла: {{ el.project.title }}</p>                
                 <p>Добавлен: {{ el.date }}</p>
-                <a href="{% url 'file_detail' el.id %}" class="btn btn-warning">-Смотреть детальнее</a>
+                <a href="{% url 'file_details' el.id %}" class="btn btn-warning">-Смотреть детальнее</a>
             </div>
         {% endfor %}
     {% else %}   

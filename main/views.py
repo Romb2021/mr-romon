@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.models import User
 
 def index(request):
     data = {
@@ -6,6 +7,12 @@ def index(request):
     }
     return render(request,'main/index.html',data)     
 
+def get_suzer(request):
+    susers = User.objects.filter(is_superuser=True)  
+    data = {
+        'title':'Cтраница вывода суперюзеров',
+        'susers': susers}
+    return render(request,'main/get_suzer.html',data)       
 
 def contact(request):
     return render(request,'main/contact.html')    

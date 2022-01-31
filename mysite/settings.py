@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'projects.apps.ProjConfig',
     'photos.apps.PhotoConfig',
     'files.apps.FilesConfig',
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Форма для вывода суперюзеров{% endblock %} 
+{% block content %}
+    <div class="features">
+        <h1>{{ data.title }}</h1>        
+        {% for user in data.users %}
+            <h4>{{ user }}</h4>
+        {% endfor %}
+    </div>
+{% endblock %} 

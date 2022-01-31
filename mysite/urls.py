@@ -14,6 +14,7 @@ urlpatterns = [
     path('projects/', include('projects.urls')),
     path('photos/', include('photos.urls')),
     path('files/', include('files.urls')),
+    path('blog/', include('blog.urls')),
     path('accounts/login/', LoginView.as_view(), name = 'login'),
 ] 
 
